@@ -1,12 +1,15 @@
 import React from 'react'
 import Header from './Components/Layout/Header'
+import Meals from './Components/Meal/Meals'
 
 const App = () => {
   return (
     <React.Fragment>
-      <Header>
-        
-      </Header>
+      <Header/>
+      <main>
+<Meals/>
+      </main>
+
     </React.Fragment>
   )
 }
