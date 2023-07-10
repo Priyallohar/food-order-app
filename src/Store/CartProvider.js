@@ -8,8 +8,8 @@ const CartProvider = (props) => {
     const cartContext = {
         item:[],
         totalAmount:0,
-        addItem:(item)=>{},
-        removeItem:(id)=>{}
+        addItem:(item)=>addItemCartHandler,
+        removeItem:(id)=>removeItemCartHandler
     }
   return (
     <CardContext.Provider value={cartContext}>
