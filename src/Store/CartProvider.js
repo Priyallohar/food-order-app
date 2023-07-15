@@ -20,7 +20,7 @@ const cartReducer = (state,action) => {
 }
 
 const CartProvider = (props) => {
-  const [cartSate,dispatchCartAction]=useReducer(cartReducer,defaultCartSate)
+  const [cartState,dispatchCartAction]=useReducer(cartReducer,defaultCartSate)
 
 
    const addItemCartHandler = item =>{
@@ -31,8 +31,8 @@ const CartProvider = (props) => {
    }
 
     const cartContext = {
-        item:[],
-        totalAmount:cartSate.totalAmount,
+        item: cartState.items,
+        totalAmount:cartState.totalAmount,
         addItem:(item)=>addItemCartHandler,
         removeItem:(id)=>removeItemCartHandler
     }
